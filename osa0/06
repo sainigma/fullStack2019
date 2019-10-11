@@ -1,0 +1,13 @@
+note over selain:
+Käyttäjä lähettää formin, sisältö lähetetään palvelimelle sekä lisätään selaimen notes -muuttujaan
+end note
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note over palvelin:
+Luetaan POST sisältö data.jsoniin
+end note
+palvelin->selain: 201 Status, pyyntö onnistui
+
+note over selain:
+Luetaan notes -muuttuja uudestaan DOM:iin, huom. data.jsonia ei pyydetä serveriltä uudestaan
+end note
