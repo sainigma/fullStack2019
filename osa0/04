@@ -1,0 +1,22 @@
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+note over palvelin:
+POST-sisältö lisätään json-tietokantaan
+end note
+palvelin->selain: 302 Status, uudelleenohjaus -> /notes
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+palvelin -->selain: notes
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin-->selain: main.css
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+palvelin->selain: main.js
+
+note over selain:
+Pyydetään json-tietokantaa palvelimelta
+end note
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin-->selain: JSON -tietokanta
+
+note over selain:
+Luetaan tietokanta DOM:iin
+end note
