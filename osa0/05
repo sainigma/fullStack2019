@@ -1,0 +1,16 @@
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+palvelin->selain: spa
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: main.css
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+palvelin->selain: spa.js
+
+note over selain:
+Ajetaan spa.js, pyydetään data.json
+end note
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin->selain: data.json
+
+note over selain:
+Jatketaan spa.js ajamista, luetaan data.json DOM:iin, odotetaan käyttäjän inputtia formiin
